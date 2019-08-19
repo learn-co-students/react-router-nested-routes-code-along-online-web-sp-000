@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import MoviesPage from './MoviesPage';
+import MovieShow from '../components/MovieShow';
+import MoviesList from '../components/MoviesList'
 
 class App extends Component {
 
