@@ -16,7 +16,7 @@ component, our previous component disappeared.
 In this code-along, we'll look at how `Route`s can be written inside components
 that are _themselves_ children of other `Route`s.
 
-## Master/Detail Pattern Without Routes
+## Master/Detail Patern Without Routes
 
 Have you ever used Apple's Messages app for your Mac? What about YouTube? These
 apps use some version of a "Master-Detail" interface: there is some piece of the
@@ -373,7 +373,7 @@ With our main task completed, let's take a quick step back and ask a question -
 what happens in this app when we visit `http://localhost:3000/movies` without a
 particular `movieId` parameter? Well, `MoviesPage` renders due to the top-level
 `/movies` `Route`, but `MoviesPage` will only render `MoviesList`. There is no
-default `Route`, so we don't see anything. If we want to create a default 
+default `Route`, so we don't see anything. If we want to create a default
 `Route` here, we can do so using the `match` prop once again:
 
 ```js
@@ -416,7 +416,7 @@ To get nested `Route`s to work, we need to utilize route information that is
 stored in the `match` props. `match` contains both the current URL path in
 `match.url`, as well as any parameters in `match.params`. We define the
 parameter names in a `Route`'s path by prepending a colon (`:`) to the front of
-the name. This name will then show up as a key inside `match.params`. 
+the name. This name will then show up as a key inside `match.params`.
 
 We can use parameters to look up specific data - in this case matching the key
 of a `movies` object with the URL parameter, `:movieId`, allowed us to display a
