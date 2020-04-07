@@ -1,12 +1,17 @@
-// .src/containers/MoviesPage.js
 import React from 'react';
-import { Route } from 'react-router-dom';
-import MoviesList from '../components/MoviesList';
+import { Link } from 'react-router-dom';
+import MovieShow from '../components/MovieShow';
 
-const MoviesPage = ({ match, movies }) => (
-  <div>
-    <MoviesList movies={movies} />
-  </div>
-)
+const MoviesList = ({ movies }) => {
+  const renderMovies = Object.keys(movies).map(movieID =>
+    <Link key={movieID} to={`/movies/${movieID}`}>{movies[movieID].title}</Link>
+  );
 
-export default MoviesPage
+  return (
+    <div>
+      {renderMovies}
+    </div>
+  );
+};
+
+export default MoviesList;
