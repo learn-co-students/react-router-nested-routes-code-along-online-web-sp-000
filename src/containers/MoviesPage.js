@@ -8,8 +8,8 @@ const MoviesPage = ({ match, movies }) => (
   <div>
     <MoviesList movies={movies} />
 
-<Route exact path={match.url} render= {routerProps => <MovieShow {...routerProps} movies={movies}/> }/>
+    <Route exact path={match.url} render={() => <h3>Choose a movie from the list above</h3>}/>
+    <Route path={`${match.url}/:movieId`} render={routerProps => <MovieShow {...routerProps} movies={movies} /> }/>
   </div>
 )
-
 export default MoviesPage
