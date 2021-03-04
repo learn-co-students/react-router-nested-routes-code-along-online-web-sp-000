@@ -21,7 +21,9 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
+          {/* Here render is returning the JSX "Home" instead of the entire component   */}
           <Route exact path="/" render={() => <div>Home</div>} />
+          {/* The object that is passed into routerProps gets passed into MoviesPage as props  */}
           <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
         </div>
       </Router>
