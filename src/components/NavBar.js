@@ -11,7 +11,7 @@ const NavBar = () => {
         Home
       </NavLink>
       <NavLink 
-        style={{ marginRight: '10px' }} 
+        style={{ marginRight: '10px'}} 
         to="/movies"
       >
         Movies
